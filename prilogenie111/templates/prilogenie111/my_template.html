@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <style>
+        body {
+            background: #CCCCCC;
+            font-size: 20px;
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+        }
+        #centerBox {
+            margin: 0 auto;
+            background: white;
+            width: 800px;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div id = "centerBox">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
