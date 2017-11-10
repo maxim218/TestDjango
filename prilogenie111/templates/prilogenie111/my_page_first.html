@@ -8,5 +8,23 @@
 
 <h1>My First Page</h1>
 
+<br>
+<br>
+
+{{ my_records_arr }}
+
+{% for xxx in my_records_arr %}
+    <p>
+        f1: {{ xxx.title|linebreaksbr }}  <br>
+        f2: {{ xxx.text|linebreaksbr }}  <br>
+        f3: {{ xxx.my_field_1|linebreaksbr }}  <br>
+        f4: {{ xxx.my_field_2|linebreaksbr }}  <br>
+        f3: {{ xxx.my_field_3|linebreaksbr }}  <br>
+        f4: {{ xxx.my_field_4|linebreaksbr }}  <br>
+    </p>
+    <br>
+    <br>
+{%  endfor %}
+
 </body>
 </html>
