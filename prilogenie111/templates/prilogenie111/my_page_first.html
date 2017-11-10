@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Page</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'style_1.css' %}">
+
 </head>
 <body>
 
 <h1>My First Page</h1>
+
+<img src = "{% static 'my_picture.jpg' %}">
 
 <br>
 <br>
@@ -24,7 +30,7 @@
     </p>
     <br>
     <br>
-{%  endfor %}
+{% endfor %}
 
 </body>
 </html>
