@@ -6,10 +6,12 @@
         <p>
             f1: {{ xxx.title|linebreaksbr }}  <br>
             f2: {{ xxx.text|linebreaksbr }}  <br>
-            f3: {{ xxx.my_field_1|linebreaksbr }}  <br>
-            f4: {{ xxx.my_field_2|linebreaksbr }}  <br>
-            f3: {{ xxx.my_field_3|linebreaksbr }}  <br>
-            f4: {{ xxx.my_field_4|linebreaksbr }}  <br>
+            r1: {{ xxx.my_field_1|linebreaksbr }}  <br>
+            r2: {{ xxx.my_field_2|linebreaksbr }}  <br>
+            r3: {{ xxx.my_field_3|linebreaksbr }}  <br>
+            r4: {{ xxx.my_field_4|linebreaksbr }}  <br>
+
+            <a href = "{% url 'my_page_second' pk=xxx.pk %}">My Own Link To Record {{ xxx.title }}</a> <br>
         </p>
         <br>
         <br>

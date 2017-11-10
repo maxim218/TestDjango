@@ -2,9 +2,18 @@
 
 {% block content %}
 
-    <h2>Second page</h2>
-    <h2>Second page</h2>
-    <h2>Second page</h2>
+    <h2>Second page with record info</h2>
+
+    <p>Post info</p>
+
+    <p>
+        {{ my_record.title }} <br>
+        {{ my_record.text }} <br>
+        {{ my_record.my_field_1 }} <br>
+        {{ my_record.my_field_2 }} <br>
+        {{ my_record.my_field_3 }} <br>
+        {{ my_record.my_field_4 }} <br>
+    </p>
 
 {% endblock %}
 
