@@ -19,3 +19,12 @@ class MyFirstModel(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class MyModelForSum(models.Model):
+    aaa = models.TextField()
+    bbb = models.TextField()
+    ccc = models.TextField()
+
+    def __str__(self):
+        return "It_Is_My_Record"
