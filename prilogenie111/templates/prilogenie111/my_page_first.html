@@ -2,6 +2,49 @@
 
 {% block content %}
 
+    <br>
+    <br>
+    <br>
+
+    <p>t1</p>
+    <input id = 't1'>
+    <p>t2</p>
+    <input id = 't2'>
+    <p> </p>
+    <button onclick = "f()">Получить сумму</button>
+
+    <script>
+        function elem(s) {
+            return document.getElementById(s.toString());
+        }
+
+        function f() {
+            const t1 = elem('t1');
+            const t2 = elem('t2');
+
+            let a = t1.value;
+            let b = t2.value;
+
+            let url = "/my_summa/?a=" + a + "&b=" + b;
+
+            let r = new XMLHttpRequest();
+            r.open("GET",url, true);
+            r.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
+            r.send(null);
+            r.onreadystatechange = function() {
+                if(r.readyState === 4 && r.status === 200) {
+                    const answer = r.responseText;
+                    r = null;
+                    alert(answer);
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <br>
+    <br>
+
     {% for xxx in my_records_arr %}
         <p>
             f1: {{ xxx.title|linebreaksbr }}  <br>

@@ -1,0 +1,13 @@
+{% extends 'prilogenie111/my_template.html' %}
+
+{% block content %}
+
+    <h1>It is my third page with form</h1>
+    <form method = "POST" action = "yandex.ru">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type= "submit"> Отправить </button>
+    </form>
+
+{% endblock %}
+

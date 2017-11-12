@@ -4,7 +4,7 @@
 
     <h2>Second page with record info</h2>
 
-    <p>Post info</p>
+    <p>My Record Info</p>
 
     <p>
         {{ my_record.title }} <br>
@@ -15,5 +15,14 @@
         {{ my_record.my_field_4 }} <br>
     </p>
 
-{% endblock %}
+    <br>
+    <br>
+    <button onclick="f()">На главную</button>
 
+    <script>
+        function f() {
+            window.location = "/";
+        }
+    </script>
+
+{% endblock %}
